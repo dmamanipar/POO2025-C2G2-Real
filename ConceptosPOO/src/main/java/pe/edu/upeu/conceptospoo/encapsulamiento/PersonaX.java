@@ -12,6 +12,8 @@ import lombok.Setter;
  *
  * @author SOFTWARE
  */
+//@Setter
+//@Getter
 @Data
 public class PersonaX {
     

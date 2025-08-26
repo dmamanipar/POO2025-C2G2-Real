@@ -4,4 +4,5 @@ public interface Animal {
     void emitirSonido();
 
     void dormir();
+
 }

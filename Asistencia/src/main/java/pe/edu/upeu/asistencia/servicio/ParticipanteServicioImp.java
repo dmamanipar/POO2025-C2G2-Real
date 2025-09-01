@@ -10,27 +10,27 @@ import java.util.List;
 public class ParticipanteServicioImp extends ParticipanteRepositorio implements ParticipanteServicioI {
 
     @Override
-    public void saveEntidad(Participante participante) {
+    public void save(Participante participante) {
         listaParticipantes.add(participante);
     }
 
     @Override
-    public List<Participante> findAllEntidades() {
+    public List<Participante> findAll() {
         return listaParticipantes;
     }
 
     @Override
-    public void updateEntidad(Participante participante, int index) {
+    public void update(Participante participante, int index) {
         listaParticipantes.set(index, participante);
     }
 
     @Override
-    public void deleteEntidad(int index) {
+    public void delete(int index) {
         listaParticipantes.remove(index);
     }
 
     @Override
-    public Participante findEntidad(int index) {
+    public Participante findById(int index) {
         return listaParticipantes.get(index);
     }
 }

@@ -6,14 +6,14 @@ import java.util.List;
 
 public interface ParticipanteServicioI {
 
-    void saveEntidad(Participante participante); //C
+    void save(Participante participante); //C
 
-    List<Participante> findAllEntidades(); // R
+    List<Participante> findAll(); // R
 
-    void updateEntidad(Participante participante, int index); //U
+    void update(Participante participante, int index); //U
 
-    void deleteEntidad(int index); //D
+    void delete(int index); //D
 
-    Participante findEntidad(int index); //Buscar
+    Participante findById(int index); //Buscar
 
 }

@@ -33,12 +33,12 @@ public class AsistenciaController {
         participante.setNombre(new SimpleStringProperty(txtDato.getText()));
         participante.setEstado(new SimpleBooleanProperty(true));
 
-        participanteServicioI.saveEntidad(participante);
+        participanteServicioI.save(participante);
         listarEstudiantes();
     }
 
     void listarEstudiantes(){
-        for (Participante e: participanteServicioI.findAllEntidades()){
+        for (Participante e: participanteServicioI.findAll()){
             System.out.println(e.getNombre());
         }
     }

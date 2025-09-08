@@ -39,6 +39,28 @@ public class ParticipanteController {
         definirColumnas();
         listarParticipantes();
     }
+
+    public void limpiarFormulario(){
+        txtNombres.setText("");
+        txtDni.setText("");
+        txtApellidos.setText("");
+        cbxCarrera.setValue(null);
+        cbxTipoParticipante.setValue(null);
+    }
+
+    @FXML
+    public void registrarParticipante(){
+        Participante p = new Participante();
+        p.setDni(new SimpleStringProperty(txtDni.getText()));
+        p.setNombre(new SimpleStringProperty(txtNombres.getText()));
+        p.setApellidos(new SimpleStringProperty(txtApellidos.getText()));
+        p.setCarrera(cbxCarrera.getSelectionModel().getSelectedItem());
+        p.setTipoParticipante(cbxTipoParticipante.getSelectionModel().getSelectedItem());
+        ps.save(p);
+        limpiarFormulario();
+        listarParticipantes();
+    }
+
     public void definirColumnas(){
         dniColum=new TableColumn("DNI");
         nombreColum=new TableColumn("Nombres");
@@ -56,6 +78,8 @@ public class ParticipanteController {
         listaParticipantes=FXCollections.observableArrayList(ps.findAll());
         tableView.setItems(listaParticipantes);
     }
+
+
 
 
 }

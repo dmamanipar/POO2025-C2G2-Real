@@ -12,7 +12,7 @@ public interface ParticipanteServicioI {
 
     Participante update(Participante participante); //U
 
-    void delete(int index); //D
+    void delete(String dni); //D
 
     Participante findById(int index); //Buscar
 

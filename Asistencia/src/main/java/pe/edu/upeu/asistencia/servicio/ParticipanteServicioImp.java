@@ -25,8 +25,8 @@ public class ParticipanteServicioImp extends ParticipanteRepositorio implements 
     }
 
     @Override
-    public void delete(int index) {
-        listaParticipantes.remove(index);
+    public void delete(String dni) {
+       super.delete(dni);
     }
 
     @Override

@@ -87,5 +87,15 @@ public abstract class ParticipanteRepositorio {
        return p;
    }
 
+   public void delete(String dni){
+       try {
+        pst=con.prepareStatement("DELETE FROM participante WHERE dni=?");
+        pst.setString(1, dni);
+        pst.executeUpdate();
+       }catch (SQLException e){
+           throw new RuntimeException(e);
+       }
+   }
+
 
 }
